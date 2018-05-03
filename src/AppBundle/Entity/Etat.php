@@ -24,10 +24,9 @@ class Etat
 
     /**
      * @var int
-     * @ORM\ManyToOne(targetEntity="Objet", inversedBy="etats",cascade={"persist"})
-     * @ORM\Column(name="objet", type="integer")
+     * @ORM\ManyToMany(targetEntity="Objet", inversedBy="etats",cascade={"persist"})
      */
-    private $objet;
+    private $objets;
 
     /**
      * @var int
@@ -53,30 +52,46 @@ class Etat
     {
         return $this->id;
     }
-
-    /**
-     * Set objet
-     *
-     * @param integer $objet
-     *
-     * @return Etat
-     */
-    public function setObjet($objet)
-    {
-        $this->objet = $objet;
-
-        return $this;
-    }
-
-    /**
-     * Get objet
-     *
-     * @return int
-     */
-    public function getObjet()
-    {
-        return $this->objet;
-    }
+	
+	/**
+	 * @return int
+	 */
+	public function getObjets()
+	{
+		return $this->objets;
+	}
+	
+	/**
+	 * @param int $objets
+	 */
+	public function setObjets($objets)
+	{
+		$this->objets = $objets;
+	}
+	
+	/**
+	 * Add objet
+	 *
+	 * @param \AppBundle\Entity\Objet $objet
+	 *
+	 * @return Etat
+	 */
+	public function addObjet($objet)
+	{
+		$this->objets[] = $objet;
+		
+		return $this;
+	}
+	
+	/**
+	 * Remove objet
+	 *
+	 * @param \AppBundle\Entity\Objet $objet
+	 */
+	public function removeObjet($objet)
+	{
+		$this->objets->removeElement($objet);
+	}
 
     /**
      * Set vendeur

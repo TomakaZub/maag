@@ -51,9 +51,7 @@ class Objet
 
     /**
      * @var int
-     * @ORM\ManyToMany(targetEntity="Etat", mappedBy="id", cascade={"persist"})
-     * @ORM\JoinTable(name="etats_objets")
-     * @ORM\Column(name="etats", type="integer")
+     * @ORM\ManyToMany(targetEntity="Etat", mappedBy="objets", cascade={"persist"})
      */
     private $etats; 
 
@@ -236,6 +234,30 @@ class Objet
     {
         return $this->etats;
     }
+	
+	/**
+	 * Add etat
+	 *
+	 * @param \AppBundle\Entity\Etat $etat
+	 *
+	 * @return Objet
+	 */
+	public function addEat($etat)
+	{
+		$this->etats[] = $etat;
+		
+		return $this;
+	}
+	
+	/**
+	 * Remove etat
+	 *
+	 * @param \AppBundle\Entity\Etat $etat
+	 */
+	public function removeEtat($etat)
+	{
+		$this->etats->removeElement($etat);
+	}
 
     /**
      * Set hauteur

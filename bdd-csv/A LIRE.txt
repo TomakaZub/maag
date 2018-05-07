@@ -1,0 +1,2 @@
+Le fichier "objets" ne s'importe pas.
+Il y a un problème de type ou de nullable sur les champs "hauteur", "Largeur" etc.

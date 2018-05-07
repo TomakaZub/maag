@@ -77,10 +77,9 @@ class Objet
     private $profondeur;
 
     /**
-     * @var int
-     * @ORM\ManyToMany(targetEntity="Matiere", mappedBy="id", cascade={"persist"})
-     * @ORM\JoinTable(name="matieres_objets")
-     * @ORM\Column(name="matieres", type="integer")
+     * @var string
+     *
+     * @ORM\Column(name="matiere", type="string", nullable=true)
      */
     private $matieres;
 
@@ -242,7 +241,7 @@ class Objet
 	 *
 	 * @return Objet
 	 */
-	public function addEat($etat)
+	public function addEtat($etat)
 	{
 		$this->etats[] = $etat;
 		

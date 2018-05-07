@@ -25,7 +25,7 @@ class Type
     /**
      * @var string
      *
-     * @ORM\Column(name="sculpture", type="string", length=255)
+     * @ORM\Column(name="libelle", type="string", length=255)
      */
     private $libelle;
 

@@ -4,12 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/wamp64/www/maag-netbeans/src/AppBundle/Entity/Objet.php</file>
-            <file>file:/C:/wamp64/www/maag-netbeans/src/AppBundle/Entity/Vendeur.php</file>
-            <file>file:/C:/wamp64/www/maag-netbeans/src/AppBundle/Entity/Etat.php</file>
-            <file>file:/C:/wamp64/www/maag-netbeans/src/AppBundle/Entity/Type.php</file>
-            <file>file:/C:/wamp64/www/maag-netbeans/src/AppBundle/Entity/Image.php</file>
             <file>file:/C:/wamp64/www/maag-netbeans/app/config/parameters.yml.dist</file>
             <file>file:/C:/wamp64/www/maag-netbeans/src/AppBundle/Entity/Matiere.php</file>
+            <file>file:/C:/wamp64/www/maag-netbeans/src/AppBundle/Entity/LibelleEtat.php</file>
         </group>
     </open-files>
 </project-private>
